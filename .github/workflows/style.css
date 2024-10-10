@@ -1,0 +1,160 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  header {
+    background-color: #ff8ba7;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header img {
+    max-width: 150px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Form Styles */
+  form {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  form input, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form button {
+    background-color: #ff8ba7;
+    color: white;
+    cursor: pointer;
+    border: none;
+  }
+  
+  form button:hover {
+    background-color: #ff6480;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #ff8ba7;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  /* Page-specific Styles */
+  .about {
+    background-color: #fff;
+    padding: 50px;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .about img {
+    max-width: 200px;
+    border-radius: 50%;
+  }
+  
+  .about h2, .about p {
+    margin: 20px 0;
+  }
+  
+  .contact-info {
+    margin: 30px 0;
+    text-align: center;
+  }
+  
+  .contact-info p {
+    margin: 10px 0;
+  }
+  
+  ./* Container for floating images */
+.image-queue {
+  display: flex;
+  flex-direction: column; /* Arrange rows vertically */
+  gap: 20px;
+  position: relative;
+  overflow: hidden; /* Prevent overflow of images */
+  width: 100%; /* Make the container take the full width of the viewport */
+}
+
+/* Row for each line of images */
+.image-row {
+  display: flex;
+  justify-content: flex-start; /* Images float from left to right */
+  gap: 20px; /* Space between images */
+  position: relative;
+  width: 100%; /* Row stretches across the page */
+}
+
+/* Floating images styles */
+.floating-image {
+  width: 150px; /* Width of each floating image */
+  height: 150px;
+  border-radius: 50%; /* Circular images */
+  object-fit: cover;
+  animation: float-horizontal 10s infinite linear; /* Continuous floating animation */
+}
+
+/* Animation for left-to-right movement */
+@keyframes float-horizontal {
+  0% {
+      transform: translateX(-100%); /* Start from far left, off the screen */
+  }
+  100% {
+      transform: translateX(100%); /* End far right, off the screen */
+  }
+}
+
+/* Adjusting the animation timing for each row */
+.image-row:nth-child(1) img {
+  animation-duration: 12s; /* First row, slower speed */
+  animation-delay: 0s;
+}
+
+.image-row:nth-child(2) img {
+  animation-duration: 10s; /* Second row, medium speed */
+  animation-delay: 2s;
+}
+
+.image-row:nth-child(3) img {
+  animation-duration: 8s; /* Third row, faster speed */
+  animation-delay: 4s;
+}
